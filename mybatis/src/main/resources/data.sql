@@ -1,0 +1,9 @@
+DROP TABLE IF EXISTS city;
+
+CREATE TABLE city (
+id INT PRIMARY KEY AUTO_INCREMENT,
+NAME VARCHAR(20),
+state VARCHAR(20),
+country VARCHAR(20));
+
+INSERT INTO city (NAME, state, country) VALUES ('San Francisco', 'CA', 'US');

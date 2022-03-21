@@ -1,6 +1,5 @@
 package com.lorraine.jpa.config;
 
-import jakarta.persistence.EntityManager;
 import lombok.extern.slf4j.Slf4j;
 import org.hibernate.EmptyInterceptor;
 import org.hibernate.type.Type;
@@ -18,8 +17,8 @@ import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
+import javax.persistence.EntityManager;
 import javax.sql.DataSource;
-import java.io.Serial;
 import java.io.Serializable;
 import java.util.Map;
 import java.util.Objects;
@@ -87,7 +86,6 @@ public class PrimaryConfig {
      * hibernate hooks
      */
     private static class MyEmptyInterceptor extends EmptyInterceptor {
-        @Serial
         private static final long serialVersionUID = 3412086629961782369L;
 
         @Override
